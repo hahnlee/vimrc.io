@@ -1,0 +1,9 @@
+var config = {};
+
+/* server port */
+config.web = {};
+config.web.port = 4000;
+config.web.devPort = 3000;
+
+module.exports = config;
+
