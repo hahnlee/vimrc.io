@@ -21,9 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "retinajs": "~1.3.0",
-    "bootstrap": "~3.3.4",
-    "flatdoc": "~0.9.0",
-    "jquery-ui": "~1.11.4"
+    "retinajs": "~1.3.0"
   }
 }
