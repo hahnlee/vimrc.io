@@ -1,5 +1,6 @@
 var config = require('./config');
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
 
@@ -49,7 +50,15 @@ module.exports = {
                     presets: ['es2015', 'react']
                 })],
                 exclude: /node_modules/
+            },
+            {
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'sass']
             }
         ]
+    },
+
+    resolve: {
+        root: path.resolve('./src')
     }
 };
