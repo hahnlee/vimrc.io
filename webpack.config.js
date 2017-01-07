@@ -20,6 +20,11 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
+                test: /\.png$/,
+                loader: "url-loader",
+                query: {limit: 1024}
+            },
+            {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract('css!sass')
             }

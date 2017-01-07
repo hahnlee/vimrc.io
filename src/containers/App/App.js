@@ -1,10 +1,20 @@
 import React from 'react';
-import { Header } from 'components';
+import { Header, Menu, Preview } from 'components';
+require('./App.scss');
 
 class App extends React.Component {
     render() {
         return (
-            <Header/>
+            <div className="main">
+                <Header/>
+                <div className="container">
+                    <Menu/>
+                    <div className="option">
+                        {this.props.children}
+                    </div>
+                    <Preview/>
+                </div>
+            </div>
         );
     }
 }

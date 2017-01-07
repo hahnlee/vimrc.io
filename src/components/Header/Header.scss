@@ -1,3 +1,13 @@
-.nav {
-    padding: 1em;
+.header {
+    display: flex;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: -1px;
+}
+
+.nav-logo {
+    img {
+        height: 3rem;
+    }
 }

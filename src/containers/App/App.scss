@@ -1,0 +1,12 @@
+.main {
+    height: 100%;
+}
+.container {
+    display: -webkit-flex;
+    display: flex;
+    height: calc(100% - 5rem);
+}
+.option{
+    -webkit-flex: 2;
+            flex: 2;
+}

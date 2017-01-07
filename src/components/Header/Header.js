@@ -3,12 +3,15 @@ require('./Header.scss');
 
 class Header extends React.Component {
     render() {
+        const logoImage = require('./logo.png');
         return (
-            <nav>
-                <div className="nav">
-                    vimrc.io
+            <header className="header">
+                <div className="nav-logo">
+                    <img src={logoImage} />
                 </div>
-            </nav>
+                <div className="nav">
+                </div>
+            </header>
         );
     }
 }
