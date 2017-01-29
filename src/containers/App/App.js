@@ -13,7 +13,8 @@ class App extends React.Component {
                 "isGuiOnly": false,
                 "os": "global",
                 "category": "editor",
-                "default": true
+                "default": true,
+                "value": ""
             },
             {
                 "name": "mouse",
@@ -23,7 +24,8 @@ class App extends React.Component {
                 "isGuiOnly": true,
                 "os": "global",
                 "category": "editor",
-                "default": ""
+                "default": "",
+                "value": ""
             }
         ];
 

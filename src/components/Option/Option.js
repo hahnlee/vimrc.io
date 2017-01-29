@@ -7,11 +7,16 @@ class Option extends React.Component {
         this.state = {
             value: props.data.default
         };
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
     }
 
     render(){
         const selectView = (
-            <select value={this.state.value}>
+            <select value={this.state.value} onChange={this.handleChange}>
                 { this.props.data.select.map((option) => {
                     return(
                         <option>
@@ -38,7 +43,8 @@ class Option extends React.Component {
 }
 
 Option.propTypes = {
-    data: React.PropTypes.object
+    data: React.PropTypes.object,
+    index: React.PropTypes.number
 };
 
 Option.defaultProps = {
@@ -50,7 +56,9 @@ Option.defaultProps = {
         "isGuiOnly": false,
         "os": "global",
         "category": "",
-        "default": false
-    }
+        "default": false,
+        "value": ""
+    },
+    index: -1
 };
 export default Option;
