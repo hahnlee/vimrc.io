@@ -2,12 +2,14 @@
 
 import Prism from 'prismjs';
 import React from 'react';
+require('./prism.css');
 require('./Preview.scss');
 
 class Preview extends React.Component {
     
-    render() {
-        const createCode = data => {
+    render(){
+
+        const createCode = data => {    
             return data.map((option, i) => {
                 if (option.value === option.default || option.value === "")
                     return '';
@@ -22,10 +24,11 @@ class Preview extends React.Component {
                 }
             });
         };
+
         return(
-            <pre>
-                <code className="vim">
-                    { createCode(this.props.data) }
+            <pre className="language-vim">
+                <code className="language-vim">
+                    {createCode(this.props.data)}
                 </code> 
             </pre>
         );
