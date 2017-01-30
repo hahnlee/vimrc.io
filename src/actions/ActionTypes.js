@@ -1,3 +1,5 @@
 /* Option */
 export const OPTION_CHANGE = "OPTION_CHANGE";
+export const OPTION_LIST_SUCCESS = "OPTION_LIST_SUCCESS";
+export const OPTION_LIST_FAILURE = "OPTION_LIST_FAILURE";
 

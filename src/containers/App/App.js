@@ -1,47 +1,39 @@
 import React from 'react';
 import { Header, Menu, OptionList, Preview } from 'components';
+import { connect } from 'react-redux';
+import { optionChange, optionListRequest } from 'actions/option';
 require('./App.scss');
 
 class App extends React.Component {
-    render() {
-        var mockData = [
-            {
-                "name": "number",
-                "type": "checkbox",
-                "select": [],
-                "isVimOnly": false,
-                "isGuiOnly": false,
-                "os": "global",
-                "category": "editor",
-                "default": true,
-                "value": ""
-            },
-            {
-                "name": "mouse",
-                "type": "select",
-                "select": ["", "n", "v", "i", "c", "h", "a", "r"],
-                "isVimOnly": true,
-                "isGuiOnly": true,
-                "os": "global",
-                "category": "editor",
-                "default": "",
-                "value": ""
-            }
-        ];
 
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.dispatch(optionListRequest());
+    }
+
+    render() {
         return (
             <div className="main">
                 <Header/>
                 <div className="container">
                     <Menu/>
                     <div className="option">
-                        <OptionList data={mockData}/>
+                        <OptionList data={this.props.optionData}/>
                     </div>
-                    <Preview/>
+                    <Preview data={this.props.optionData}/>
                 </div>
             </div>
         );
     }
 }
 
-export default App;
+function mapStateToProps(state){
+    return {
+        optionData: state.option.data
+    };
+}
+
+export default connect(mapStateToProps)(App);

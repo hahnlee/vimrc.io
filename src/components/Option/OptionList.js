@@ -9,6 +9,7 @@ class OptionList extends React.Component {
                 return (
                     <Option
                         data={option}
+                        index={i}
                     />
                 );
             });

@@ -1,9 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { optionChange } from 'actions/option';
 
 class Option extends React.Component {
 
     constructor(props) {
         super(props);
+        console.log(this.props);
         this.state = {
             value: props.data.default
         };
@@ -11,32 +14,55 @@ class Option extends React.Component {
     }
 
     handleChange(event) {
-        this.setState({value: event.target.value});
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        this.setState({
+            value: value
+        });
+
+        this.props.optionChange(this.props.index, value);
     }
 
     render(){
-        const selectView = (
-            <select value={this.state.value} onChange={this.handleChange}>
-                { this.props.data.select.map((option) => {
-                    return(
-                        <option>
-                            {option}
-                        </option>
-                    );
-                })}
-            </select>
-        );
+        
+        let inputView = null;
+        switch (this.props.data.type){
+            case "select":
+                inputView = (
+                    <select value={this.state.value}
+                            onChange={this.handleChange}>
+                        { this.props.data.select.map((option) => {
+                            return(
+                                <option>
+                                    {option}
+                                </option>
+                            );
+                        })}
+                    </select>
+                );
+                break;
+            case "checkbox":
+                inputView = (
+                    <input type={this.props.data.type}
+                            checked={this.state.value}
+                            onChange={this.handleChange}
+                    />
+                );
+                break;
+            default:
+                inputView = (
+                    <input type={this.props.data.type}
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                    />
+                );
 
-        const inputView = (
-            <input 
-                type={this.props.data.type}
-            />
-        );
+        }
 
         return(
             <div>
                 <span>{this.props.data.name}</span>
-                { this.props.data.type == "select" ? selectView : inputView }
+                { inputView }
             </div>
         );
     }
@@ -49,6 +75,7 @@ Option.propTypes = {
 
 Option.defaultProps = {
     data: {
+        "_id": "12345678",
         "name": "vim option name",
         "type": "checkbox",
         "select": [],
@@ -61,4 +88,17 @@ Option.defaultProps = {
     },
     index: -1
 };
-export default Option;
+
+const mapStateToProps = (state) => {
+    return {
+        value: state.value
+    };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        optionChange: (index, content) => dispatch(optionChange(index, content))
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Option);

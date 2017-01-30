@@ -8,24 +8,36 @@ class Preview extends React.Component {
     
     render() {
         const createCode = data => {
-            if (data.value === '' || data.value === data.default) return '';
-            switch(data.type){
-                case 'select':
-                    return `set {$data.name}={$data.value}\n`;
-                case 'checkbox':
-                    return `set {$data.name}\n`;
-                default:
+            return data.map((option, i) => {
+                if (option.value === option.default || option.value === "")
                     return '';
-            }
+                
+                switch(option.type){
+                    case 'select':
+                        return `set ${option.name}=${option.value}\n`;
+                    case 'checkbox':
+                        return `set ${option.name}\n`;
+                    default:
+                        return '';
+                }
+            });
         };
         return(
             <pre>
                 <code className="vim">
-                    " Created by https://vimrc.io
+                    { createCode(this.props.data) }
                 </code> 
             </pre>
         );
     }
+}
+
+Preview.propTypes = {
+    data: React.PropTypes.array
+}
+
+Preview.defaultProps = {
+    data: []
 }
 
 export default Preview;
