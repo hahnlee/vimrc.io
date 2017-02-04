@@ -31,7 +31,19 @@ export function optionListRequest(){
                 "category": "editor",
                 "default": "",
                 "value": ""
-            }
+            },
+{
+"_id": "578b958ec1da760909c263f2",
+		"name": "backspace",
+		"type": "select",
+		"select": ["","indent,eol", "indent,eol,start"],
+		"isVimOnly": true,
+		"isGuiOnly": false,
+		"os": "global",
+		"category": "editor",
+		"default": "",
+		"value": ""
+	    }
         ]
         return dispatch(optionListSuccess(mockData));
     };
