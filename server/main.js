@@ -19,21 +19,21 @@ app.use(bodyParser.json());
 app.use('/', express.static(__dirname + './../public'));
 
 app.get('/hello', (req, res) => {
-    return res.send('Hello CodeLab');
+  return res.send('Hello CodeLab');
 });
 
 app.listen(port, () => {
-    console.log('Express is listening on port', port);
+  console.log('Express is listening on port', port);
 });
 
 if(process.env.NODE_ENV == 'development') {
-    console.log('Server is running on development mode');
-    const webpackConfig = require('../webpack.dev.config');
-    const compiler = webpack(webpackConfig);
-    const devServer = new WebpackDevServer(compiler, webpackConfig.devServer);
-    devServer.listen(
-        devPort, () => {
-            console.log('webpack-dev-server is listening on port', devPort);
-        }
-    );
+  console.log('Server is running on development mode');
+  const webpackConfig = require('../webpack.dev.config');
+  const compiler = webpack(webpackConfig);
+  const devServer = new WebpackDevServer(compiler, webpackConfig.devServer);
+  devServer.listen(
+    devPort, () => {
+      console.log('webpack-dev-server is listening on port', devPort);
+    }
+  );
 }

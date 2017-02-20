@@ -10,9 +10,8 @@ const rootElement = document.getElementById('root');
 const store = createStore(reducers, applyMiddleware(thunk));
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App/>
-    </Provider>
-    ,
-    rootElement
+  <Provider store={store}>
+    <App/>
+  </Provider>,
+  rootElement
 );
