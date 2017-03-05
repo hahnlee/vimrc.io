@@ -1,7 +1,18 @@
 .menubar {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
   -webkit-flex: none;
   flex: none;
   width: 230px;
   background-color: #3F3F3F;
+  border-top: 1px solid #505050;
   border-right: 1px solid #505050;
+}
+
+.donate {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
 }
