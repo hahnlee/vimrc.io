@@ -29,7 +29,7 @@ class Preview extends React.Component {
     };
     
     return(
-      <pre className="language-vim">
+      <pre className="preview language-vim">
         <code className="language-vim">
           {createCode(this.props.data)}
         </code>

@@ -1,5 +1,13 @@
+.preview {
+  border-top: 1px solid #505050;
+}
+.language-vim {
+  margin: 0!important;
+  border-radius: 0!important;
+  background: none!important;
+}
 pre {
   -webkit-flex: 1;
   flex: 1;
-  border-left: 1px solid #EEEEEE;
+  border-left: 1px solid #505050;
 }
