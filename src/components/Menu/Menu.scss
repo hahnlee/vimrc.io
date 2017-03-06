@@ -1,5 +1,6 @@
 .menubar {
   display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
@@ -11,8 +12,31 @@
   border-right: 1px solid #505050;
 }
 
-.donate {
-  position: absolute;
-  bottom: 0;
+.menubar-wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   padding: 1rem;
 }
+
+.sitemap {
+  > ul {
+    padding: 0;
+    > li {
+      list-style: none;
+      padding-bottom: 0.5rem;
+      font-weight: bold;
+      > a {
+        font-size: 1.1rem;
+        color: #BBB;
+        text-decoration: none;
+      }
+    }
+  }
+}
+

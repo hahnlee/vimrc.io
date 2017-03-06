@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { createStore, applyMiddleware } from 'redux';
-import { App } from 'containers';
+import { About, App, Category, Init } from 'containers';
 import reducers from 'reducers';
 import thunk from 'redux-thunk';
 
@@ -11,7 +12,13 @@ const store = createStore(reducers, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Init}/>
+        <Route path="category/:categoryName" component={Category}/>
+        <Route path="about" component={About}/>
+      </Route>
+    </Router>
   </Provider>,
   rootElement
 );

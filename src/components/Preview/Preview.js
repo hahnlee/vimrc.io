@@ -27,7 +27,7 @@ class Preview extends React.Component {
         }
       });
     };
-    
+
     return(
       <pre className="preview language-vim">
         <code className="language-vim">
