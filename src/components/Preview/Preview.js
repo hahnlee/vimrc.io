@@ -1,7 +1,7 @@
-import Prism from 'prismjs';
 import React from 'react';
 import { connect } from 'react-redux';
-require('./prism.css');
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { gruvboxDark } from 'react-syntax-highlighter/dist/styles';
 require('./Preview.scss');
 
 class Preview extends React.Component {
@@ -9,32 +9,43 @@ class Preview extends React.Component {
   render(){
     
     const createCode = data => {
-      for(let category in data){
-        return data[category].data.map((option, i) => {
-          let value = this.props.value[option.name];
-          if (!value || value === option.default || value === "")
-            return '';
-        
-          switch(option.type){
-            case 'select':
-            return `set ${option.name}=${value}\n`;
-            case 'checkbox':
-              if (value)
-                return `set ${option.name}\n`;
-              return `set no${option.name}\n`;
-            default:
-              return '';
-          }
-        });
+      let hlcode = '';
+      for(let category in data) {
+        for(let subcategory in data[category]["data"]) {
+          data[category]["data"][subcategory].map((option, i) => {
+            let value = this.props.value[option.name];
+            let code;
+            if (!value || value === option.default || value === ""){
+              code = '';
+            } else {
+              switch(option.type){
+                case 'number':
+                case 'select':
+                  code = `set ${option.name}=${value}\n`;
+                  break;
+                case 'checkbox':
+                  if (value) {
+                    code = `set ${option.name}\n`;
+                    break;
+                  }
+                  code = `set no${option.name}\n`;
+                  break;
+                default:
+                  code = '';
+                  break;
+              }
+            }
+            hlcode += code;
+          });
+        }
       }
+      return hlcode;
     };
 
     return(
-      <pre className="preview language-vim">
-        <code className="language-vim">
-          {createCode(this.props.data)}
-        </code>
-      </pre>
+      <SyntaxHighlighter language='vim' style={gruvboxDark} showLineNumbers={true}>
+        {createCode(this.props.data)}
+      </SyntaxHighlighter>
     );
   }
 }

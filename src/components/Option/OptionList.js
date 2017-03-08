@@ -1,12 +1,12 @@
 import React from 'react';
 import { Option } from 'components';
+require('./OptionList.scss');
 
 class OptionList extends React.Component {
   
   render() {
-    const mapToComponents = data => {
+    const mapToOption = data => {
       return data.map((option, i) => {
-        console.log(this.props.value);
         let value = "";
         if(typeof this.props.value[option.name] === "undefined") {
           value = option.default;
@@ -19,15 +19,30 @@ class OptionList extends React.Component {
           <Option
             data={option}
             value={value}
-            />
+          />
         );
       });
     };
+
+    const mapToComponents = data => {
+      let optionList = [];
+      for(let subcategory in data) {
+        optionList.push((
+          <li>
+            <h2>{subcategory}</h2>
+            <ul className="option-list">
+              {mapToOption(data[subcategory])}
+            </ul>
+          </li>
+        ));
+      }
+      return optionList;
+    };
     
     return (
-      <div>
+      <ul className="option-group">
         { mapToComponents(this.props.data) }
-      </div>
+      </ul>
     );
   }
 }

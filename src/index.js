@@ -15,8 +15,8 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={Init}/>
-        <Route path="category/:categoryName" component={Category}/>
         <Route path="about" component={About}/>
+        <Route path=":categoryName" component={Category}/>
       </Route>
     </Router>
   </Provider>,

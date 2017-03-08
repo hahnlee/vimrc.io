@@ -57,10 +57,12 @@ class Option extends React.Component {
     }
     
     return(
-      <div>
-        <span>{this.props.data.name}</span>
-          { inputView }
-      </div>
+      <li>
+        <label>
+          {this.props.data.name} / {this.props.data.shortname}
+        </label>
+        { inputView }
+      </li>
     );
   }
 }

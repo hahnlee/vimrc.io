@@ -1,0 +1,21 @@
+.option-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li > h2 {
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    margin: 0;
+    border-bottom: 1px solid #505050;
+  }
+}
+.option-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li {
+    padding: 1rem;
+    border-bottom: 1px solid #505050;
+  }
+}
+

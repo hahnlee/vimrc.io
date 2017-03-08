@@ -27,13 +27,13 @@ class Menu extends React.Component {
             <Link to="/">Default</Link>
           </li>
           <li>
-            <Link to="/category/display">Display</Link>
+            <Link to="/display">Display</Link>
           </li>
           <li>
-            <Link to="/category/file">File</Link>
+            <Link to="/file">File</Link>
           </li>
           <li>
-            <Link to="/category/gui">Gui</Link>
+            <Link to="/gui">Gui</Link>
           </li>
         </ul>
       </nav>

@@ -5,6 +5,7 @@ import {
   OPTION_LOAD_FAILURE
 } from './ActionTypes';
 import axios from 'axios';
+import _ from 'underscore';
 
 export function optionLoadRequest(category) {
   return (dispatch) => {
@@ -14,7 +15,8 @@ export function optionLoadRequest(category) {
     .then((res) => {
       dispatch(optionLoadSuccess(category, res.data));
     }).catch((err) => {
-      dispatch(optionLoadFailure());
+      console.log(err);
+      dispatch(optionLoadFailure(category));
     });
   };
 }
@@ -26,8 +28,8 @@ export function optionLoad(category) {
   };
 }
 
-export function optionLoadSuccess(category, data) {
-  console.log(data);
+export function optionLoadSuccess(category, rawData) {
+  let data = _.groupBy(rawData, 'subcategory');
   return {
     type: OPTION_LOAD_SUCCESS,
     category,
@@ -35,7 +37,7 @@ export function optionLoadSuccess(category, data) {
   };
 }
 
-export function optionLoadFailure() {
+export function optionLoadFailure(category) {
   return {
     type: OPTION_LOAD_FAILURE
   };
