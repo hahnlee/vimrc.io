@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Header, Menu, Preview } from 'components';
 require('./App.scss');
 
@@ -14,17 +13,11 @@ class App extends React.Component {
           <div className="option">
             {this.props.children}
           </div>
-          <Preview data={this.props.optionData}/>
+          <Preview/>
         </div>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    optionData: state.option.data
-  };
-}
-
-export default connect(mapStateToProps)(App);
+export default App;

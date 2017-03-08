@@ -6,9 +6,8 @@ class Option extends React.Component {
   
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
-      value: props.data.default
+      value: props.value
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -19,9 +18,8 @@ class Option extends React.Component {
     const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
       value: value
-    });
-      
-    this.props.optionChange(this.props.index, value);
+    });      
+    this.props.optionChange(this.props.data.name, value);
   }
   
   render() {
@@ -82,17 +80,11 @@ Option.defaultProps = {
     "isGuiOnly": false,
     "os": "global",
     "category": "",
-    "default": false,
-    "value": ""
+    "default": false
   },
+  value: "",
   index: -1
 };
-
-const mapStateToProps = (state) => {
-  return {
-    value: state.value
-  };
-}
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -100,4 +92,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Option);
+export default connect(null, mapDispatchToProps)(Option);

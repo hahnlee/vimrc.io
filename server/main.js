@@ -9,6 +9,10 @@ import config from '../config.js'
 import morgan from 'morgan'; // HTTP REQUEST LOGGER
 import bodyParser from 'body-parser'; // PARSE HTML BODY
 
+import mongoose from 'mongoose';
+
+import api from './routes';
+
 const app = express();
 const port = config.web.port;
 const devPort = config.web.devPort;
@@ -16,11 +20,16 @@ const devPort = config.web.devPort;
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
+/* mongodb connection */
+const db = mongoose.connection;
+db.on('error', console.error);
+db.once('open', () => { console.log('Connected to mongodb server'); });
+// mongoose.connect('mongodb://username:password@host:port/database=');
+mongoose.connect(config.mongodb.connectUrl);
+
 app.use('/', express.static(__dirname + './../public'));
 
-app.get('/hello', (req, res) => {
-  return res.send('Hello CodeLab');
-});
+app.use('/api', api);
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './../public/index.html'));

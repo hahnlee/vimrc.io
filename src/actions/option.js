@@ -1,65 +1,50 @@
 import {
   OPTION_CHANGE,
-  OPTION_LIST_SUCCESS,
-  OPTION_LIST_FAILURE
+  OPTION_LOAD,
+  OPTION_LOAD_SUCCESS,
+  OPTION_LOAD_FAILURE
 } from './ActionTypes';
 import axios from 'axios';
 
-export function optionListRequest() {
+export function optionLoadRequest(category) {
   return (dispatch) => {
-    let mockData = [
-      {
-        "_id": "578b958ec1da760909c263f4",
-        "name": "number",
-        "type": "checkbox",
-        "select": [],
-        "isVimOnly": false,
-        "isGuiOnly": false,
-        "os": "global",
-        "category": "editor",
-        "default": false,
-        "value": ""
-      },
-      {
-        "_id": "578b957ec1da760909c263f3",
-        "name": "mouse",
-        "type": "select",
-        "select": ["", "n", "v", "i", "c", "h", "a", "r"],
-        "isVimOnly": true,
-        "isGuiOnly": true,
-        "os": "global",
-        "category": "editor",
-        "default": "",
-        "value": ""
-      },
-      {
-        "_id": "578b958ec1da760909c263f2",
-        "name": "backspace",
-        "type": "select",
-        "select": ["","indent,eol", "indent,eol,start"],
-        "isVimOnly": true,
-        "isGuiOnly": false,
-        "os": "global",
-        "category": "editor",
-        "default": "",
-        "value": ""
-      }
-    ]
-    return dispatch(optionListSuccess(mockData));
+    dispatch(optionLoad(category));
+    let url = `/api/option/${category}`;
+    return axios.get(url)
+    .then((res) => {
+      dispatch(optionLoadSuccess(category, res.data));
+    }).catch((err) => {
+      dispatch(optionLoadFailure());
+    });
   };
 }
 
-export function optionListSuccess(data){
+export function optionLoad(category) {
   return {
-    type: OPTION_LIST_SUCCESS,
+    type: OPTION_LOAD,
+    category
+  };
+}
+
+export function optionLoadSuccess(category, data) {
+  console.log(data);
+  return {
+    type: OPTION_LOAD_SUCCESS,
+    category,
     data
   };
 }
 
-export function optionChange(index, content) {
+export function optionLoadFailure() {
+  return {
+    type: OPTION_LOAD_FAILURE
+  };
+}
+
+export function optionChange(key, value) {
   return {
     type: OPTION_CHANGE,
-    index,
-    content
+    key,
+    value
   }
 }
