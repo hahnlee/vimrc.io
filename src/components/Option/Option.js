@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { optionChange } from 'actions/option';
+require('./Option.scss')
 
 class Option extends React.Component {
   
@@ -57,11 +58,17 @@ class Option extends React.Component {
     }
     
     return(
-      <li>
-        <label>
+      <li key={this.props.data.name}>
+        <label className="option-name">
           {this.props.data.name} / {this.props.data.shortname}
         </label>
         { inputView }
+        <p className="option-info">
+          {this.props.info} 
+          <span className="option-default">
+            default: {this.props.data.default.toString()}
+          </span>
+        </p>
       </li>
     );
   }

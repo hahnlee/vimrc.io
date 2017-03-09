@@ -15,6 +15,7 @@ class Category extends React.Component {
       this.props.optionLoadRequest(category).then(
         () => {
           console.log(this.props.options);
+          console.log(this.props.info);
         }
       );
     }
@@ -25,6 +26,7 @@ class Category extends React.Component {
       <OptionList
         data={this.props.options[this.props.params.categoryName].data}
         value={this.props.value}
+        info={this.props.info}
       />
     );
   }
@@ -33,7 +35,8 @@ class Category extends React.Component {
 const mapStateToProps = (state) => {
   return {
     options: state.option.list,
-    value: state.option.value
+    value: state.option.value,
+    info: state.option.info.data
   }
 };
 

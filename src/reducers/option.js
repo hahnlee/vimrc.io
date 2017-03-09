@@ -24,7 +24,12 @@ const initialState = {
       data: []
     }
   },
-  value: {}
+  value: {},
+  lang: 'en',
+  info: {
+    status: 'INIT',
+    data: {}
+  }
 }
 
 export default function option (state, action) {
@@ -39,7 +44,9 @@ export default function option (state, action) {
       });
     case types.OPTION_LOAD:
       return update(state, {
-        list: {[action.category]: {status: {$set: 'WAITING'}}}
+        list: {
+          [action.category]: {status: {$set: 'WAITING'}}
+        }
       });
     case types.OPTION_LOAD_SUCCESS:
       return update(state, {
@@ -50,7 +57,28 @@ export default function option (state, action) {
       });
     case types.OPTION_LOAD_FAILURE:
       return update(state, {
-        list: {[action.category]: {status: {$set: 'FAILURE'}}}
+        list: {
+          [action.category]: {status: {$set: 'FAILURE'}}
+        }
+      });
+    case types.OPTION_INFO_LOAD:
+      return update(state, {
+        info: {status: {$set: 'WAITING'}}
+      });
+    case types.OPTION_INFO_LOAD_SUCCESS:
+      return update(state, {
+        info: {
+          status: {$set: 'SUCCESS'},
+          data: {$set: action.data}
+        }
+      });
+    case types.OPTION_INFO_LOAD_FAILURE:
+      return update(state, {
+        info: {status: {$set: 'FAILURE'}}
+      });
+    case types.SET_LANG:
+      return update(state, {
+        lang: {$set: action.lang}
       });
     default:
       return state;

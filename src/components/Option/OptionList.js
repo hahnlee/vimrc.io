@@ -8,17 +8,18 @@ class OptionList extends React.Component {
     const mapToOption = data => {
       return data.map((option, i) => {
         let value = "";
+        let info = this.props.info[option.name];
+        console.log(this.props.info);
         if(typeof this.props.value[option.name] === "undefined") {
           value = option.default;
-          console.log("no value");
         } else {
           value = this.props.value[option.name];
-          console.log('not');
         }
         return (
           <Option
             data={option}
             value={value}
+            info={info}
           />
         );
       });
@@ -53,7 +54,8 @@ OptionList.propTypes = {
 
 OptionList.defaultProps = {
   data: [],
-  value: {}
+  value: {},
+  info: {}
 }
 
 export default OptionList;
