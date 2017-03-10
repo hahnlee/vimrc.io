@@ -11,8 +11,8 @@ class Preview extends React.Component {
     const createCode = data => {
       let hlcode = '';
       for(let category in data) {
-        for(let subcategory in data[category]["data"]) {
-          data[category]["data"][subcategory].map((option, i) => {
+        for(let subcategory in data[category]) {
+          data[category][subcategory].map((option, i) => {
             let value = this.props.value[option.name];
             let code;
             if (!value || value === option.default || value === ""){
@@ -53,7 +53,7 @@ class Preview extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    data: state.option.list,
+    data: state.option.list.data,
     value: state.option.value
   };
 };

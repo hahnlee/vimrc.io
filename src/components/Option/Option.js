@@ -42,10 +42,13 @@ class Option extends React.Component {
         break;
       case "checkbox":
         inputView = (
-          <input type={this.props.data.type}
-            checked={this.state.value}
-            onChange={this.handleChange}
+          <label className="switch-original">
+            <input type={this.props.data.type}
+              checked={this.state.value}
+              onChange={this.handleChange}
             />
+            <span className="check"></span>
+          </label>
         );
         break;
       default:
@@ -97,7 +100,7 @@ Option.defaultProps = {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    optionChange: (index, content) => dispatch(optionChange(index, content))
+    optionChange: (key, value) => dispatch(optionChange(key, value))
   };
 }
 

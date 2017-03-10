@@ -7,7 +7,6 @@ const router = express.Router();
 
 router.post('/', (req, res) => {
   let option = new Option(req.body);
-  console.log(req.body);
   option.save(err => {
     if(err) {
       console.log(err);
@@ -17,13 +16,21 @@ router.post('/', (req, res) => {
   });
 });
 
+router.get('/', (req, res) => {
+  Option.find()
+  .sort({"category": 1})
+  .exec((err, options) => {
+    if(err) throw err;
+    return res.json(options);
+   });
+});
+
 router.get('/:category', (req, res) => {
-  console.log(req.params.category);
   Option.find({category: req.params.category})
   .sort({"subcategory": 1})
   .exec((err, options) => {
     if(err) throw err;
-    res.json(options);
+    return res.json(options);
   });
 });
 

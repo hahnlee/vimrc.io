@@ -1,18 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Spinner from 'react-spinkit';
 import { Header, Menu, Preview } from 'components';
-import { setLang, optionInfoLoadRequest } from 'actions/option';
+import { optionLoadRequest, optionInfoLoadRequest, setLang } from 'actions/option';
 import getLang from 'helpers/getLang';
 require('./App.scss');
 
 class App extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     let lang = getLang();
     this.props.setLang(lang);
     this.props.optionInfoLoadRequest(lang);
+    this.props.optionLoadRequest();
   }
-  
+
   render() {
     return (
       <div className="main">
@@ -29,15 +31,24 @@ class App extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    optionStatus: state.option.list.status
+  };
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
-    setLang: (lang) => {
-      return dispatch(setLang(lang));
+    optionLoadRequest: () => {
+      return dispatch(optionLoadRequest());
     },
     optionInfoLoadRequest: (lang) => {
       return dispatch(optionInfoLoadRequest(lang));
+    },
+    setLang: (lang) => {
+      return dispatch(setLang(lang));
     }
   };
 }
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

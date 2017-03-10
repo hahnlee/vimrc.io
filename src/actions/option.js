@@ -12,37 +12,38 @@ import axios from 'axios';
 import _ from 'underscore';
 
 /* option */
-export function optionLoadRequest(category) {
+export function optionLoadRequest() {
   return (dispatch) => {
-    dispatch(optionLoad(category));
-    let url = `/api/option/${category}`;
-    return axios.get(url)
+    dispatch(optionLoad());
+    return axios.get('/api/option')
     .then((res) => {
-      dispatch(optionLoadSuccess(category, res.data));
+      dispatch(optionLoadSuccess(res.data));
     }).catch((err) => {
       console.log(err);
-      dispatch(optionLoadFailure(category));
+      dispatch(optionLoadFailure());
     });
   };
 }
 
-export function optionLoad(category) {
+export function optionLoad() {
   return {
-    type: OPTION_LOAD,
-    category
+    type: OPTION_LOAD
   };
 }
 
-export function optionLoadSuccess(category, rawData) {
-  let data = _.groupBy(rawData, 'subcategory');
+export function optionLoadSuccess(rawData) {
+  let data = _.groupBy(rawData, 'category');
+  for(let category in data) {
+    data[category] = _.groupBy(data[category], 'subcategory');
+  }
+  console.log(data);
   return {
     type: OPTION_LOAD_SUCCESS,
-    category,
     data
   };
 }
 
-export function optionLoadFailure(category) {
+export function optionLoadFailure() {
   return {
     type: OPTION_LOAD_FAILURE
   };

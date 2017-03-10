@@ -3,26 +3,8 @@ import update from 'react-addons-update';
 
 const initialState = {
   list: {
-    display: {
-      status: 'INIT',
-      data: []
-    },
-    edit: {
-      status: 'INIT',
-      data: []
-    },
-    file: {
-      status: 'INIT',
-      data: []
-    },
-    gui: {
-      status: 'INIT',
-      data: []
-    },
-    language: {
-      status: 'INIT',
-      data: []
-    }
+    status: 'INIT',
+    data: {}
   },
   value: {},
   lang: 'en',
@@ -45,20 +27,20 @@ export default function option (state, action) {
     case types.OPTION_LOAD:
       return update(state, {
         list: {
-          [action.category]: {status: {$set: 'WAITING'}}
+          status: {$set: 'WAITING'}
         }
       });
     case types.OPTION_LOAD_SUCCESS:
       return update(state, {
-        list: {[action.category]: {
+        list: {
           data: {$set: action.data},
           status: {$set: 'SUCCESS'}
-        }}
+        }
       });
     case types.OPTION_LOAD_FAILURE:
       return update(state, {
         list: {
-          [action.category]: {status: {$set: 'FAILURE'}}
+          status: {$set: 'FAILURE'}
         }
       });
     case types.OPTION_INFO_LOAD:
