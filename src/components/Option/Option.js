@@ -7,9 +7,6 @@ class Option extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = {
-      value: props.value
-    };
     this.handleChange = this.handleChange.bind(this);
   }
   
@@ -17,55 +14,51 @@ class Option extends React.Component {
   handleChange(event) {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
-    this.setState({
-      value: value
-    });      
     this.props.optionChange(this.props.data.name, value);
   }
   
   render() {
     
-    let inputView = null;
-    switch (this.props.data.type) {
-      case "select":
-        inputView = (
-          <select value={this.state.value} onChange={this.handleChange}>
-            { this.props.data.select.map((option) => {
-              return(
-                <option>
-                  {option}
-                </option>
-              );
-            })}
-          </select>
-        );
-        break;
-      case "checkbox":
-        inputView = (
-          <label className="switch-original">
+    const inputView = () => {
+      switch (this.props.data.type) {
+        case "select":
+          return (
+            <select value={this.props.value} onChange={this.handleChange}>
+              { this.props.data.select.map((option) => {
+                return(
+                  <option>
+                    {option}
+                  </option>
+                );
+              })}
+            </select>
+          );
+        case "checkbox":
+          return (
+            <label className="switch-original">
+              <input type={this.props.data.type}
+                checked={this.props.value}
+                onChange={this.handleChange}
+              />
+              <span className="check"></span>
+            </label>
+          );
+        default:
+          return (
             <input type={this.props.data.type}
-              checked={this.state.value}
+              value={this.props.value}
               onChange={this.handleChange}
-            />
-            <span className="check"></span>
-          </label>
-        );
-        break;
-      default:
-        inputView = (
-          <input type={this.props.data.type}
-            value={this.state.value}
-            onChange={this.handleChange}
-            />
-        );
-    }
+              />
+          );
+        }
+      }
     
     return(
       <li key={this.props.data.name}>
         <label className="option-name">
           {this.props.data.name} / {this.props.data.shortname}
         </label>
-        { inputView }
+        { inputView() }
         <p className="option-info">
           {this.props.info} 
           <span className="option-default">

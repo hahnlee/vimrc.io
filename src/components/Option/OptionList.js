@@ -9,6 +9,7 @@ class OptionList extends React.Component {
       return data.map((option, i) => {
         let value = "";
         let info = this.props.info[option.name];
+        console.log(this.props.value[option.name]);
         if(typeof this.props.value[option.name] === "undefined") {
           value = option.default;
         } else {
