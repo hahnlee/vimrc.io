@@ -13,7 +13,12 @@ const Option = new Schema({
   os: {type: String, default: "global"},
   category: String,
   subcategory: String,
-  default: Schema.Types.Mixed
+  default: { 
+    global: Schema.Types.Mixed,
+    linux: Schema.Types.Mixed,
+    mac: Schema.Types.Mixed,
+    windows: Schema.Types.Mixed
+  }
 });
 
 export default mongoose.model('option', Option);

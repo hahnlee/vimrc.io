@@ -7,6 +7,8 @@ const initialState = {
     data: {}
   },
   value: {},
+  os: 'global',
+  useVimOnly: true,
   lang: 'en',
   info: {
     status: 'INIT',

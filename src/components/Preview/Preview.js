@@ -15,7 +15,9 @@ class Preview extends React.Component {
           data[category][subcategory].map((option, i) => {
             let value = this.props.value[option.name];
             let code;
-            if (!value || value === option.default || value === ""){
+            let defaultValue = (typeof option.default.global !== "undefined") ? 
+              option.default.global : option.default[this.props.os];
+            if (!value || value === defaultValue || value === ""){
               code = '';
             } else {
               switch(option.type){
@@ -54,7 +56,8 @@ class Preview extends React.Component {
 const mapStateToProps = (state) => {
   return {
     data: state.option.list.data,
-    value: state.option.value
+    value: state.option.value,
+    os: state.option.os
   };
 };
 

@@ -17,8 +17,7 @@ class Option extends React.Component {
     this.props.optionChange(this.props.data.name, value);
   }
   
-  render() {
-    
+  render() { 
     const inputView = () => {
       switch (this.props.data.type) {
         case "select":
@@ -54,7 +53,7 @@ class Option extends React.Component {
       }
     
     return(
-      <li key={this.props.data.name}>
+      <li key={this.props.data.name} className="option-item">
         <label className="option-name">
           {this.props.data.name} / {this.props.data.shortname}
         </label>
@@ -62,7 +61,7 @@ class Option extends React.Component {
         <p className="option-info">
           {this.props.info} 
           <span className="option-default">
-            default: {this.props.data.default.toString()}
+            default: {this.props.defaultValue.toString()}
           </span>
         </p>
       </li>
@@ -88,7 +87,8 @@ Option.defaultProps = {
     "default": false
   },
   value: "",
-  index: -1
+  index: -1,
+  defaultValue: ""
 };
 
 const mapDispatchToProps = (dispatch) => {
