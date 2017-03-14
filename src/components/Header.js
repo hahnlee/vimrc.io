@@ -3,7 +3,7 @@ require('./Header.scss');
 
 class Header extends React.Component {
   render() {
-    const logoImage = require('./logo.png');
+    const logoImage = require('assets/logo.png');
     
     return (
       <header className="header">

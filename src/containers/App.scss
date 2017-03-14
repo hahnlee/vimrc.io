@@ -2,12 +2,10 @@
   height: 100%;
 }
 .container {
-  display: -webkit-flex;
   display: flex;
   height: calc(100% - 5rem);
 }
 .option{
-  -webkit-flex: 1;
   flex: 1;
   border-top: 1px solid #505050;
   overflow-y: auto;

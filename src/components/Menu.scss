@@ -1,10 +1,6 @@
 .menubar {
-  display: -webkit-flex;
-  display: -moz-flex;
   display: flex;
-  -webkit-justify-content: center;
   justify-content: center;
-  -webkit-flex: none;
   flex: none;
   width: 230px;
   background-color: #3F3F3F;
@@ -13,13 +9,8 @@
 }
 
 .menubar-wrapper {
-  display: -webkit-flex;
-  display: -moz-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: space-between;
   justify-content: space-between;
   padding: 1rem;
 }

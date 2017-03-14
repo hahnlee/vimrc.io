@@ -76,7 +76,6 @@
     background: #008287;
     &:after {
       left: auto;
-      -webkit-transform: translateX(2rem);
       transform: translateX(2rem);
       transition: all 0.2s linear;
     }

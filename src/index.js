@@ -7,6 +7,8 @@ import { About, App, Category, Init } from 'containers';
 import reducers from 'reducers';
 import thunk from 'redux-thunk';
 
+import './index.css'; 
+
 const rootElement = document.getElementById('root');
 const store = createStore(reducers, applyMiddleware(thunk));
 

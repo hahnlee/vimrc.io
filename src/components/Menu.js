@@ -1,5 +1,5 @@
 import React from 'react';
-import config from '../../../config';
+import config from '../../config';
 import { Link } from 'react-router';
 require('./Menu.scss');
 

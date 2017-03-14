@@ -1,6 +1,6 @@
-import App from './App/App';
-import About from './About/About';
-import Category from './Category/Category';
-import Init from './Init/Init';
+import App from './App';
+import About from './About';
+import Category from './Category';
+import Init from './Init';
 
 export { App, About, Category, Init };
