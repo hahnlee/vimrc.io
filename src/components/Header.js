@@ -1,5 +1,5 @@
 import React from 'react';
-require('./Header.scss');
+import './Header.scss';
 
 class Header extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div className="nav-logo">
-          <img src={logoImage} />
+          <img src={logoImage} alt="logo"/>
         </div>
         <div className="nav">
         </div>

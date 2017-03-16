@@ -3,11 +3,6 @@ import { connect } from 'react-redux';
 import { OptionList } from 'components';
 
 class Category extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <OptionList

@@ -1,9 +1,8 @@
 import React from 'react';
 import { Option } from 'components';
-require('./OptionList.scss');
+import './OptionList.scss';
 
 class OptionList extends React.Component {
-  
   render() {
     const mapToOption = data => {
       return data.map((option, i) => {
@@ -11,7 +10,6 @@ class OptionList extends React.Component {
         let info = this.props.info[option.name];
         let defaultValue = (typeof option.default.global !== "undefined") ?
           option.default.global : option.default[this.props.os];
-        console.log(defaultValue);
         if (typeof this.props.value[option.name] === "undefined") {
           value = defaultValue;
         } else {
@@ -20,6 +18,7 @@ class OptionList extends React.Component {
         return (
           <Option
             data={option}
+            key={option.name}
             value={value}
             info={info}
             defaultValue={defaultValue}
@@ -32,7 +31,7 @@ class OptionList extends React.Component {
       let optionList = [];
       for(let subcategory in data) {
         optionList.push((
-          <li>
+          <li key={subcategory}>
             <h2>{subcategory}</h2>
             <ul className="option-list">
               {mapToOption(data[subcategory])}
@@ -45,22 +44,21 @@ class OptionList extends React.Component {
     
     return (
       <ul className="option-group">
-        { console.log(this.props.data) }
-        { mapToComponents(this.props.data) }
+        {mapToComponents(this.props.data)}
       </ul>
     );
   }
 }
 
 OptionList.propTypes = {
-  data: React.PropTypes.array,
+  data: React.PropTypes.object,
   value: React.PropTypes.object,
   info: React.PropTypes.object,
-  os: React.PropTypes.String
+  os: React.PropTypes.string
 }
 
 OptionList.defaultProps = {
-  data: [],
+  data: {},
   value: {},
   info: {},
   os: 'global'

@@ -92,6 +92,7 @@ module.exports = {
           /\.png$/,
           /\.scss$/,
           /\.svg$/,
+          /\.json$/,
           /\.woff$/,
           /\.woff2$/,
           /\.[ot]tf$/,

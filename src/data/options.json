@@ -1,0 +1,17 @@
+[
+  {
+    "name": "number",
+    "shortname": "nu",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimonly": true,
+    "isGuionly": false,
+    "os": "global",
+    "category": "display",
+    "subcategory": "line number",
+    "default": {
+      "global": false
+    }
+  }
+]

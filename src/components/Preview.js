@@ -2,46 +2,49 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { gruvboxDark } from 'react-syntax-highlighter/dist/styles';
-require('./Preview.scss');
+import './Preview.scss';
 
 class Preview extends React.Component {
   
   render(){
+    const optionToCode = option => {
+      let value = this.props.value[option.name];
+      let code = '';
+
+      // define defalut value by os
+      let defaultValue = (typeof option.default.global !== "undefined") ?
+        option.default.global : option.default[this.props.os];
+      
+      // defalut value
+      if (!value || value === defaultValue || value === "") {
+        return code;
+      }
+      
+      // none defalut value
+      switch (option.type) {
+        case 'number':
+        case 'select':
+          code = `set ${option.name}=${value}\n`;
+          return code;
+        case 'checkbox':
+          code = value ? `set ${option.name}\n` : code = `set no${option.name}\n`;
+          return code;
+        default:
+          code = '';
+          return code;
+      }
+    }
     
     const createCode = data => {
-      let hlcode = '';
-      for(let category in data) {
-        for(let subcategory in data[category]) {
-          data[category][subcategory].map((option, i) => {
-            let value = this.props.value[option.name];
-            let code;
-            let defaultValue = (typeof option.default.global !== "undefined") ? 
-              option.default.global : option.default[this.props.os];
-            if (!value || value === defaultValue || value === ""){
-              code = '';
-            } else {
-              switch(option.type){
-                case 'number':
-                case 'select':
-                  code = `set ${option.name}=${value}\n`;
-                  break;
-                case 'checkbox':
-                  if (value) {
-                    code = `set ${option.name}\n`;
-                    break;
-                  }
-                  code = `set no${option.name}\n`;
-                  break;
-                default:
-                  code = '';
-                  break;
-              }
-            }
-            hlcode += code;
-          });
+      let code = '';
+      for (let category in data) {
+        for (let subcategory in data[category]) {
+          for (let i in data[category][subcategory]) {
+            code += optionToCode(data[category][subcategory][i]);
+          }
         }
       }
-      return hlcode;
+      return code;
     };
 
     return(

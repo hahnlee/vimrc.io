@@ -8,8 +8,6 @@
     "start": "node scripts/start.js"
   },
   "dependencies": {
-    "axios": "^0.15.3",
-    "debug": "~2.2.0",
     "highlight.js": "^9.10.0",
     "react": "^15.4.1",
     "react-addons-update": "^15.4.1",

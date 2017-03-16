@@ -8,20 +8,18 @@ import {
   OPTION_INFO_LOAD_FAILURE,
   SET_LANG
 } from './ActionTypes';
-import axios from 'axios';
 import _ from 'underscore';
 
 /* option */
 export function optionLoadRequest() {
   return (dispatch) => {
     dispatch(optionLoad());
-    return axios.get('/api/option')
-    .then((res) => {
-      dispatch(optionLoadSuccess(res.data));
-    }).catch((err) => {
-      console.log(err);
-      dispatch(optionLoadFailure());
-    });
+    let options = require('data/options.json');
+    try {
+      return dispatch(optionLoadSuccess(options));
+    } catch(e) {
+      return(optionLoadFailure());
+    }
   };
 }
 
@@ -36,7 +34,6 @@ export function optionLoadSuccess(rawData) {
   for(let category in data) {
     data[category] = _.groupBy(data[category], 'subcategory');
   }
-  console.log(data);
   return {
     type: OPTION_LOAD_SUCCESS,
     data
@@ -61,15 +58,14 @@ export function optionChange(key, value) {
 export function optionInfoLoadRequest(lang) {
   return (dispatch) => {
     dispatch(optionInfoLoad(lang));
-    let url = `/api/option/info/${lang}`;
-    return axios.get(url)
-    .then((res) => {
-      console.log(res.data);
-      dispatch(optionInfoLoadSuccess(res.data.info));
-    }).catch((err) => {
-      console.log(err);
-      dispatch(optionInfoLoadFailure());
-    });
+    let url = `data/${lang}/optioninfo.json`;
+    let optioninfo;
+    try {
+      optioninfo = require(url);
+    } catch (err) {
+      optioninfo = require('data/en/optioninfo.json');
+    }
+    dispatch(optionInfoLoadSuccess(optioninfo));
   }; 
 }
 

@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Spinner from 'react-spinkit';
 import { Header, Menu, Preview } from 'components';
 import { optionLoadRequest, optionInfoLoadRequest, setLang } from 'actions/option';
 import getLang from 'helpers/getLang';
-require('./App.scss');
+import './App.scss';
 
 class App extends React.Component {
 
