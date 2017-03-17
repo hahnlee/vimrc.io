@@ -4,6 +4,7 @@
 .container {
   display: flex;
   height: calc(100% - 5rem);
+  position: relative;
   overflow: hidden;
 }
 .option {
