@@ -8,7 +8,7 @@ class OptionList extends React.Component {
       return data.map((option, i) => {
         let value = "";
         let info = this.props.info[option.name];
-        let defaultValue = (typeof option.default.global !== "undefined") ?
+        let defaultValue = (typeof option.default[this.props.os] === "undefined") ?
           option.default.global : option.default[this.props.os];
         if (typeof this.props.value[option.name] === "undefined") {
           value = defaultValue;

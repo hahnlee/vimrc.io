@@ -1,15 +1,426 @@
 [
   {
+    "name": "aleph",
+    "shortname": "al",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": 224,
+      "dos": 128
+    }
+  },
+  {
+    "name": "altkeymap",
+    "shortname": "akm",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "ambiwidth",
+    "shortname": "ambw",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": "single"
+    }
+  },
+  {
+    "name": "antialias",
+    "shortname": "anti",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "macOS",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "macOS": false
+    }
+  },
+  {
+    "name": "autochdir",
+    "shortname": "acd",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "arabic",
+    "shortname": "arab",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "arabicshape",
+    "shortname": "arshape",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "autoindent",
+    "shortname": "ai",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "autoread",
+    "shortname": "ar",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "autowrite",
+    "shortname": "aw",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "autowriteall",
+    "shortname": "awa",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "background",
+    "shortname": "bg",
+    "type": "select",
+    "condition": false,
+    "select": ["dark", "light"],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "color",
+    "default": {
+      "global": "dark/light"
+    }
+  },
+  {
+    "name": "backspace",
+    "shortname": "bs",
+    "type": "select",
+    "condition": false,
+    "select": ["", "indent,eol", "indent,eol,start"],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "backup",
+    "shortname": "bs",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "backupcopy",
+    "shortname": "bkc",
+    "type": "select",
+    "condition": false,
+    "select": ["yes", "no", "auto"],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "global": "auto",
+      "macOS": "yes",
+      "linux": "yes",
+      "unix": "yes"
+    }
+  },
+  {
+    "name": "backupdir",
+    "shortname": "bdir",
+    "type": "text",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "windows": ".,c:/tmp,c:/temp",
+      "global": ".,~/tmp,~/"
+    }
+  },
+  {
+    "name": "backupext",
+    "shortname": "bex",
+    "type": "text",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "global": "~",
+      "vms": "_"
+    }
+  },
+  {
+    "name": "backupskip",
+    "shortname": "bsk",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "global": "/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*"
+    }
+  },
+  {
+    "name": "balloondelay",
+    "shortname": "bdlay",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "balloon",
+    "default": {
+      "global": 600
+    }
+  },
+  {
+    "name": "ballooneval",
+    "shortname": "beval",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "balloon",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "balloonexpr",
+    "shortname": "bexpr",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "balloon",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "bioskey",
+    "shortname": "biosk",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "dos",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "breakat",
+    "shortname": "brk",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": " ^I!@*-+;:,./?"
+    }
+  },
+  {
+    "name": "browsedir",
+    "shortname": "bsdir",
+    "type": "text",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": "last"
+    }
+  },
+  {
+    "name": "casemap",
+    "shortname": "cmp",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": "internal,keepascii"
+    }
+  },
+  {
+    "name": "cindent",
+    "shortname": "cin",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "smartindent",
+    "shortname": "si",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": false
+    }
+  },
+  {
     "name": "number",
     "shortname": "nu",
     "type": "checkbox",
     "condition": false,
     "select": [],
-    "isVimonly": true,
-    "isGuionly": false,
+    "isVimOnly": true,
+    "isGuiOnly": false,
     "os": "global",
     "category": "display",
-    "subcategory": "line number",
+    "subCategory": "line number",
     "default": {
       "global": false
     }

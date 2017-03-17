@@ -2,7 +2,7 @@ var config = {};
 
 /* paypal */
 config.paypal = {};
-config.paypal.encryped = '';
+config.paypal.encrypted = '';
 
 module.exports = config;
 

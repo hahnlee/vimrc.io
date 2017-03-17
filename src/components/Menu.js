@@ -6,7 +6,7 @@ import './Menu.scss';
 class Menu extends React.Component {
   render() {
     
-    const encrypted = `-----BEGIN PKCS7-----${config.paypal.encrypted}==-----END PKCS7-----`;
+    const encrypted = config.paypal.encrypted;
     const paypalAlt = "PayPal - The safer, easier way to pay online!";
 
     const bottom = (

@@ -23,9 +23,9 @@ class Option extends React.Component {
         case "select":
           return (
             <select value={this.props.value} onChange={this.handleChange}>
-              { this.props.data.select.map((option) => {
+              { this.props.data.select.map((option, i) => {
                 return(
-                  <option>
+                  <option key={`${option}-${i}`}>
                     {option}
                   </option>
                 );

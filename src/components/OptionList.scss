@@ -1,5 +1,7 @@
 .option-group {
   list-style: none;
+  height: 100%;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
   > li > h2 {

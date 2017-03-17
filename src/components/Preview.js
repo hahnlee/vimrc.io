@@ -12,7 +12,7 @@ class Preview extends React.Component {
       let code = '';
 
       // define defalut value by os
-      let defaultValue = (typeof option.default.global !== "undefined") ?
+      let defaultValue = (typeof option.default[this.props.os] === "undefined") ?
         option.default.global : option.default[this.props.os];
       
       // defalut value
@@ -22,15 +22,11 @@ class Preview extends React.Component {
       
       // none defalut value
       switch (option.type) {
-        case 'number':
-        case 'select':
-          code = `set ${option.name}=${value}\n`;
-          return code;
         case 'checkbox':
           code = value ? `set ${option.name}\n` : code = `set no${option.name}\n`;
           return code;
         default:
-          code = '';
+          code = `set ${option.name}=${value}\n`;
           return code;
       }
     }

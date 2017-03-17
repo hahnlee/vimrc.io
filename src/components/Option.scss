@@ -23,8 +23,8 @@
   input {
     position: absolute;
     opacity: 0;
-    width: 0;
-    height: 0;
+    width: 0.0625rem;
+    height: 0.0625rem;
   }
   
   .check, .caption {
@@ -55,13 +55,13 @@
   .check:after {
     position: absolute;
     left: -1px;
-    top: -2px;
+    top: -1px;
     display: block;
     content: "";
     height: 1rem;
     width: .5625rem;
     outline: 2px #494949 solid;
-    border: 3px #494949 solid;
+    border: 1px #494949 solid;
     cursor: pointer;
     background: #494949;
     z-index: 2;
@@ -83,8 +83,8 @@
   
   input[type="checkbox"]:disabled ~ .check {
     background-color: #e6e6e6;
-    border-color: #fff;
-	&:after {
+    border-color: #FFF;
+	  &:after {
       background-color: #494949;
       outline-color: #494949;
       border-color: #494949;

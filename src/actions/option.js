@@ -8,6 +8,7 @@ import {
   OPTION_INFO_LOAD_FAILURE,
   SET_LANG
 } from './ActionTypes';
+import { getOptionInfo } from 'data';
 import _ from 'underscore';
 
 /* option */
@@ -32,7 +33,7 @@ export function optionLoad() {
 export function optionLoadSuccess(rawData) {
   let data = _.groupBy(rawData, 'category');
   for(let category in data) {
-    data[category] = _.groupBy(data[category], 'subcategory');
+    data[category] = _.groupBy(data[category], 'subCategory');
   }
   return {
     type: OPTION_LOAD_SUCCESS,
@@ -58,13 +59,7 @@ export function optionChange(key, value) {
 export function optionInfoLoadRequest(lang) {
   return (dispatch) => {
     dispatch(optionInfoLoad(lang));
-    let url = `data/${lang}/optioninfo.json`;
-    let optioninfo;
-    try {
-      optioninfo = require(url);
-    } catch (err) {
-      optioninfo = require('data/en/optioninfo.json');
-    }
+    let optioninfo = getOptionInfo(lang);
     dispatch(optionInfoLoadSuccess(optioninfo));
   }; 
 }
