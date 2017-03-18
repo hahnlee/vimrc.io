@@ -11,3 +11,6 @@ export const OPTION_INFO_LOAD_FAILURE = "OPTION_INFO_LOAD_FAILURE";
 
 /* Lang */
 export const SET_LANG = "SET_LANG";
+
+/* OS */
+export const SET_OS = "SET_OS";

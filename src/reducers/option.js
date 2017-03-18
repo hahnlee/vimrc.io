@@ -64,6 +64,10 @@ export default function option (state, action) {
       return update(state, {
         lang: {$set: action.lang}
       });
+    case types.SET_OS:
+      return update(state, {
+        os: {$set: action.OS}
+      });
     default:
       return state;
   }

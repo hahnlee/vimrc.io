@@ -30,6 +30,9 @@ class Menu extends React.Component {
             <Link to="/display">Display</Link>
           </li>
           <li>
+            <Link to="/edit">Edit</Link>
+          </li>
+          <li>
             <Link to="/file">File</Link>
           </li>
           <li>

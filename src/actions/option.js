@@ -6,7 +6,8 @@ import {
   OPTION_INFO_LOAD,
   OPTION_INFO_LOAD_SUCCESS,
   OPTION_INFO_LOAD_FAILURE,
-  SET_LANG
+  SET_LANG,
+  SET_OS
 } from './ActionTypes';
 import { getOptionInfo } from 'data';
 import _ from 'underscore';
@@ -87,5 +88,12 @@ export function setLang(lang) {
   return {
     type: SET_LANG,
     lang
+  };
+}
+
+export function setOS(OS) {
+  return {
+    type: SET_OS,
+    OS
   };
 }

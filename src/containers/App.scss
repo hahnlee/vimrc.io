@@ -9,6 +9,7 @@
 .option {
   flex: 1;
   border-top: 1px solid #505050;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 

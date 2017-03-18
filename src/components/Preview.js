@@ -16,19 +16,22 @@ class Preview extends React.Component {
         option.default.global : option.default[this.props.os];
       
       // defalut value
-      if (!value || value === defaultValue || value === "") {
+      if (typeof value === "undefined" || value === defaultValue || value === "") {
         return code;
       }
       
       // none defalut value
       switch (option.type) {
         case 'checkbox':
-          code = value ? `set ${option.name}\n` : code = `set no${option.name}\n`;
-          return code;
+          code = value ? `set ${option.name}` : code = `set no${option.name}`;
+          break;
         default:
-          code = `set ${option.name}=${value}\n`;
-          return code;
+          code = `set ${option.name}=${value}`;
+          break;
       }
+      // add comment
+      code += `  " ${this.props.info[option.name]}\n`;
+      return code;
     }
     
     const createCode = data => {
@@ -55,6 +58,7 @@ class Preview extends React.Component {
 const mapStateToProps = (state) => {
   return {
     data: state.option.list.data,
+    info: state.option.info.data,
     value: state.option.value,
     os: state.option.os
   };
