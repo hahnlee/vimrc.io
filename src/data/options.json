@@ -880,6 +880,21 @@
     }
   },
   {
+    "name": "insertmode",
+    "shortname": "im",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "edit mode",
+    "default": {
+      "global": false
+    }
+  },
+  {
     "name": "laststatus",
     "shortname": "ls",
     "type": "select",
@@ -1212,6 +1227,36 @@
     "os": "global",
     "category": "edit",
     "subCategory": "spell check",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "splitbelow",
+    "shortname": "sb",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "split",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "splitright",
+    "shortname": "spr",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "split",
     "default": {
       "global": false
     }

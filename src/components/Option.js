@@ -59,10 +59,10 @@ class Option extends React.Component {
         </label>
         {inputView()}
         <p className="option-info">
-          {this.props.info} 
-          <span className="option-default">
-            default: {this.props.defaultValue.toString()}
-          </span>
+          {this.props.info}
+        </p>
+        <p className="option-default">
+          default: {this.props.defaultValue.toString()}
         </p>
       </li>
     );

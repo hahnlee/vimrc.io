@@ -12,7 +12,8 @@
 }
 .option-default {
   color: rgb(251, 73, 52);
-  padding-left: 1rem;
+  margin: .5rem 0 0 0;
+  word-break: break-all;
 }
 
 /* came from https://github.com/olton/Metro-UI-CSS/blob/master/less/inputs.less */ 

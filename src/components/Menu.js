@@ -38,6 +38,9 @@ class Menu extends React.Component {
           <li>
             <Link to="/gui">Gui</Link>
           </li>
+          <li>
+            <Link to="/unclassified">Unclassified</Link>
+          </li>
         </ul>
       </nav>
     );
