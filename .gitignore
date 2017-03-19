@@ -92,3 +92,6 @@ Temporary Items
 
 # server configuration
 config.js
+
+#build
+build/
