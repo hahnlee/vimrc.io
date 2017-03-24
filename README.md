@@ -8,7 +8,7 @@ npm install
 npm run start
 ```
 
-#LICENSE
+# LICENSE
 ```
 MIT License
 
