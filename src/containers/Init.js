@@ -18,32 +18,40 @@ class Init extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1>OS</h1>
-        <div onChange={this.handleOS}>
-          <input name="os" id="linux" type="radio"
-            value="linux" checked={"linux" === this.props.os}
-          />
-          <label className="os-select" htmlFor="linux">
-            <img src={linux} alt="lunux"/>
-            <h3>Linux</h3>
-          </label>
-          <input name="os" id="macOS" type="radio"
-            value="macOS" checked={"macOS" === this.props.os}
-          />
-          <label className="os-select" htmlFor="macOS">
-            <img src={macOS} alt="macOS"/>
-            <h3>macOS</h3>
-          </label>
-          <input name="os" id="windows" type="radio"
-            value="windows" checked={"windows" === this.props.os}
-          />
-          <label className="os-select" htmlFor="windows">
-            <img src={windows} alt="windows"/>
-            <h3>windows</h3>
-          </label>
-        </div>
-      </div>
+      <ul className="option-group">
+        <li>
+          <h2>OS</h2>
+          <div className="select-item" onChange={this.handleOS}>
+            <div className="select-os"> 
+              <label className="select-os-label" htmlFor="linux">
+                <img src={linux} alt="lunux"/>
+                <h3>Linux</h3>
+              </label>
+              <input name="os" id="linux" type="radio"
+                value="linux" checked={"linux" === this.props.os}
+              />
+            </div>
+            <div className="select-os">
+              <label className="select-os-label" htmlFor="macOS">
+                <img src={macOS} alt="macOS"/>
+                <h3>macOS</h3>
+              </label>
+              <input name="os" id="macOS" type="radio"
+                value="macOS" checked={"macOS" === this.props.os}
+              />
+            </div>
+            <div className="select-os">
+              <label className="select-os-label" htmlFor="windows">
+                <img src={windows} alt="windows"/>
+                <h3>windows</h3>
+              </label>
+              <input name="os" id="windows" type="radio"
+                value="windows" checked={"windows" === this.props.os}
+              />
+            </div>
+          </div>
+        </li>
+      </ul>
     );
   }
 }

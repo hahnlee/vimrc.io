@@ -6,6 +6,9 @@
   background-color: #3F3F3F;
   border-top: 1px solid #505050;
   border-right: 1px solid #505050;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .menubar-wrapper {

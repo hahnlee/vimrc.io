@@ -76,7 +76,7 @@
   input[type="checkbox"]:checked ~ .check {
     background: #008287;
     &:after {
-      left: auto;
+      left: 1px;
       transform: translateX(2rem);
       transition: all 0.2s linear;
     }

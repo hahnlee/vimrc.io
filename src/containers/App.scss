@@ -5,6 +5,9 @@
   display: flex;
   height: calc(100% - 5rem);
   overflow: hidden;
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
 }
 .option {
   flex: 1;
