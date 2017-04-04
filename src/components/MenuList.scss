@@ -1,0 +1,19 @@
+.menubar {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 200px;
+  background-color: #3F3F3F;
+  border-top: 1px solid #505050;
+  border-right: 1px solid #505050;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.menubar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}

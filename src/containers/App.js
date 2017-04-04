@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Header, Menu, Preview } from 'components';
+import { Header, MenuList, Preview } from 'components';
 import { optionLoadRequest, optionInfoLoadRequest, setLang } from 'actions/option';
 import getLang from 'helpers/getLang';
 import './App.scss';
@@ -18,13 +18,13 @@ class App extends React.Component {
     return (
       <div className="main">
         <Header/>
-        <div className="container">
-          <Menu/>
+        <main className="container">
+          <MenuList/>
           <div className="option">
             {this.props.children}
           </div>
           <Preview/>
-        </div>
+        </main>
       </div>
     );
   }

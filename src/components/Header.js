@@ -1,18 +1,15 @@
 import React from 'react';
 import './Header.scss';
+import logoImage from 'assets/logo.png';
 
-const Header = () => {
-  const logoImage = require('assets/logo.png');
-    
-  return (
-    <header className="header">
-      <div className="nav-logo">
-        <img src={logoImage} alt="logo"/>
-      </div>
-      <div className="nav">
-      </div>
-    </header>
-  );
-}
+const Header = () => (
+  <header className="header">
+    <div className="nav-logo">
+      <img src={logoImage} alt="logo"/>
+    </div>
+    <div className="nav">
+    </div>
+  </header>
+);
 
 export default Header;
