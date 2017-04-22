@@ -1,6 +1,7 @@
 import React from 'react';
-import './Header.scss';
+import GithubCorner from 'react-github-corner';
 import logoImage from 'assets/logo.png';
+import './Header.scss';
 
 const Header = () => (
   <header className="header">
@@ -9,6 +10,12 @@ const Header = () => (
     </div>
     <div className="nav">
     </div>
+    <GithubCorner
+      href="https://github.com/sn0wle0pard/vimrc.io"
+      bannerColor="#FFF"
+      octoColor="#3F3F3F"
+      direction="right"
+    />
   </header>
 );
 
