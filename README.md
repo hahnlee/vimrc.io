@@ -1,8 +1,8 @@
 # vimrc.io
-Create .vimrc file for your vim editor http://vimrc.io
+Create .vimrc file for your vim editor https://vimrc.io
 
 ```
-git clone https://github.com/sn0wle0pard/vimrc.io.git
+git clone https://github.com/hahnlee/vimrc.io.git
 cd vimrc.io
 npm install
 npm run start

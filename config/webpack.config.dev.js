@@ -1,5 +1,5 @@
 // base on https://github.com/facebookincubator/create-react-app
-// patch webpack v2 by sn0wle0pard
+// patch webpack v2 by hahnlee
 'use strict';
 
 var autoprefixer = require('autoprefixer');

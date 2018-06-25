@@ -11,7 +11,7 @@ const Header = () => (
     <div className="nav">
     </div>
     <GithubCorner
-      href="https://github.com/sn0wle0pard/vimrc.io"
+      href="https://github.com/hahnlee/vimrc.io"
       bannerColor="#FFF"
       octoColor="#3F3F3F"
       direction="right"

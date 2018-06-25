@@ -1,7 +1,7 @@
 {
   "name": "vimrc.io",
   "version": "0.0.0",
-  "homepage": "http://sn0wle0pard.github.io/vimrc.io",
+  "homepage": "http://hahnlee.github.io/vimrc.io",
   "scripts": {
     "clean": "rm -rf build public/bundle.js",
     "build": "node scripts/build.js",
@@ -68,6 +68,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "author": "Han Lee(sn0wle0pard)",
+  "author": "Han Lee",
   "license": "MIT"
 }
