@@ -6,8 +6,8 @@ Create .vimrc file for your vim editor https://vimrc.io
 ```
 git clone https://github.com/hahnlee/vimrc.io.git
 cd vimrc.io
-npm install
-npm run start
+yarn
+yarn dev
 ```
 
 # LICENSE
