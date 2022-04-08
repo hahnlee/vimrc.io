@@ -1,13 +1,10 @@
 import Header from '@components/Header'
+import Sidebar from '@components/Sidebar'
+import { AppProps } from 'next/app'
 import Head from 'next/head'
-import { ReactNode } from 'react'
-import { globalStyles } from './App.styled'
+import { Container, globalStyles, Main } from './App.styled'
 
-interface Props {
-  children: ReactNode
-}
-
-export default function App({ children }: Props) {
+export default function App({ Component, pageProps }: AppProps) {
   globalStyles()
 
   return (
@@ -15,8 +12,17 @@ export default function App({ children }: Props) {
       <Head>
         <title>vimrc.io</title>
       </Head>
-      <Header />
-      {children}
+      <Container>
+        <Header
+          css={{
+            gridColumn: 'span 2',
+          }}
+        />
+        <Sidebar />
+        <Main>
+          <Component {...pageProps} />
+        </Main>
+      </Container>
     </>
   )
 }
