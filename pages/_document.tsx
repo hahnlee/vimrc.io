@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { getCssText } from '@styles/stitches'
 
 export default function Document() {
   return (
@@ -59,6 +60,7 @@ export default function Document() {
           content="Create useful .vimrc file for your vim editor"
         />
         <meta itemProp="image" content="/images/og-img.png" />
+        <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
       </Head>
       <body>
         <Main />

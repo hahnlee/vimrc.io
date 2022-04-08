@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@stitches/react", "virtual:7357cc5d804fcacbd3b0d75d7b342f8be5ea45ef4b6d33c05e3088b08912c1587b2caa9a1ee2238ef1ce333863550a97347edf054811230c272c593d0e19e089#npm:1.2.7"],\
             ["@types/node", "npm:17.0.23"],\
             ["@types/react", "npm:18.0.0"],\
             ["next", "virtual:7357cc5d804fcacbd3b0d75d7b342f8be5ea45ef4b6d33c05e3088b08912c1587b2caa9a1ee2238ef1ce333863550a97347edf054811230c272c593d0e19e089#npm:12.1.4"],\
@@ -156,6 +157,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/@next-swc-win32-x64-msvc-npm-12.1.4-f668038e2f/node_modules/@next/swc-win32-x64-msvc/",\
           "packageDependencies": [\
             ["@next/swc-win32-x64-msvc", "npm:12.1.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@stitches/react", [\
+        ["npm:1.2.7", {\
+          "packageLocation": "./.yarn/cache/@stitches-react-npm-1.2.7-f56948d6aa-f4a66d2086.zip/node_modules/@stitches/react/",\
+          "packageDependencies": [\
+            ["@stitches/react", "npm:1.2.7"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:7357cc5d804fcacbd3b0d75d7b342f8be5ea45ef4b6d33c05e3088b08912c1587b2caa9a1ee2238ef1ce333863550a97347edf054811230c272c593d0e19e089#npm:1.2.7", {\
+          "packageLocation": "./.yarn/__virtual__/@stitches-react-virtual-22ff0d1bd0/0/cache/@stitches-react-npm-1.2.7-f56948d6aa-f4a66d2086.zip/node_modules/@stitches/react/",\
+          "packageDependencies": [\
+            ["@stitches/react", "virtual:7357cc5d804fcacbd3b0d75d7b342f8be5ea45ef4b6d33c05e3088b08912c1587b2caa9a1ee2238ef1ce333863550a97347edf054811230c272c593d0e19e089#npm:1.2.7"],\
+            ["@types/react", "npm:18.0.0"],\
+            ["react", "npm:18.0.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -417,6 +440,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["vimrc.io", "workspace:."],\
+            ["@stitches/react", "virtual:7357cc5d804fcacbd3b0d75d7b342f8be5ea45ef4b6d33c05e3088b08912c1587b2caa9a1ee2238ef1ce333863550a97347edf054811230c272c593d0e19e089#npm:1.2.7"],\
             ["@types/node", "npm:17.0.23"],\
             ["@types/react", "npm:18.0.0"],\
             ["next", "virtual:7357cc5d804fcacbd3b0d75d7b342f8be5ea45ef4b6d33c05e3088b08912c1587b2caa9a1ee2238ef1ce333863550a97347edf054811230c272c593d0e19e089#npm:12.1.4"],\
