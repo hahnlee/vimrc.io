@@ -1,0 +1,1399 @@
+[
+  {
+    "name": "aleph",
+    "shortname": "al",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": 224,
+      "dos": 128
+    }
+  },
+  {
+    "name": "altkeymap",
+    "shortname": "akm",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "ambiwidth",
+    "shortname": "ambw",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": "single"
+    }
+  },
+  {
+    "name": "antialias",
+    "shortname": "anti",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "macOS",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "macOS": false
+    }
+  },
+  {
+    "name": "autochdir",
+    "shortname": "acd",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "arabic",
+    "shortname": "arab",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "arabicshape",
+    "shortname": "arshape",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "autoindent",
+    "shortname": "ai",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "autoread",
+    "shortname": "ar",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "file I/O",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "autowrite",
+    "shortname": "aw",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "file I/O",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "autowriteall",
+    "shortname": "awa",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "file I/O",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "background",
+    "shortname": "bg",
+    "type": "select",
+    "condition": false,
+    "select": ["dark", "light"],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "color",
+    "default": {
+      "global": "dark/light"
+    }
+  },
+  {
+    "name": "backspace",
+    "shortname": "bs",
+    "type": "select",
+    "condition": false,
+    "select": ["", "indent,eol", "indent,eol,start"],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "key",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "backup",
+    "shortname": "bs",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "backupcopy",
+    "shortname": "bkc",
+    "type": "select",
+    "condition": false,
+    "select": ["yes", "no", "auto"],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "global": "auto",
+      "macOS": "yes",
+      "linux": "yes",
+      "unix": "yes"
+    }
+  },
+  {
+    "name": "backupdir",
+    "shortname": "bdir",
+    "type": "text",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "windows": ".,c:/tmp,c:/temp",
+      "global": ".,~/tmp,~/"
+    }
+  },
+  {
+    "name": "backupext",
+    "shortname": "bex",
+    "type": "text",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "global": "~",
+      "vms": "_"
+    }
+  },
+  {
+    "name": "backupskip",
+    "shortname": "bsk",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "backup",
+    "default": {
+      "global": "/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*"
+    }
+  },
+  {
+    "name": "balloondelay",
+    "shortname": "bdlay",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "balloon",
+    "default": {
+      "global": 600
+    }
+  },
+  {
+    "name": "ballooneval",
+    "shortname": "beval",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "balloon",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "balloonexpr",
+    "shortname": "bexpr",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "balloon",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "bioskey",
+    "shortname": "biosk",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "dos",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "breakat",
+    "shortname": "brk",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": " ^I!@*-+;:,./?"
+    }
+  },
+  {
+    "name": "browsedir",
+    "shortname": "bsdir",
+    "type": "text",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": "last"
+    }
+  },
+  {
+    "name": "casemap",
+    "shortname": "cmp",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "unclassified",
+    "subCategory": "unclassified",
+    "default": {
+      "global": "internal,keepascii"
+    }
+  },
+  {
+    "name": "cindent",
+    "shortname": "cin",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "cinkeys",
+    "shortname": "cink",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": "0{,0},0),:,0#,!^F,o,O,e"
+    }
+  },
+  {
+    "name": "cinoptions",
+    "shortname": "cino",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "cinwords",
+    "shortname": "cinw",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": "if,else,while,do,for,switch"
+    }
+  },
+  {
+    "name": "copyindent",
+    "shortname": "ci",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "colorcolumn",
+    "shortname": "cc",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "line break",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "directory",
+    "shortname": "dir",
+    "type": "text",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "swap",
+    "default": {
+      "amiga": ".,t:",
+      "windows": ".,c:\tmp,c:\temp",
+      "linux": ".,~/tmp,/var/tmp,/tmp",
+      "macOS": ".,~/tmp,/var/tmp,/tmp",
+      "unix": ".,~/tmp,/var/tmp,/tmp"
+    }
+  },
+  {
+    "name": "endofline",
+    "shortname": "eol",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "EOL",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "esckeys",
+    "shortname": "ek",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "key",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "exrc",
+    "shortname": "ex",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "vimrc",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "secure",
+    "shortname": "",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "vimrc",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "foldclose",
+    "shortname": "fcl",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "foldcolumn",
+    "shortname": "fdc",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": 0
+    }
+  },
+  {
+    "name": "foldenable",
+    "shortname": "fen",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "foldexpr",
+    "shortname": "fde",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": "0"
+    }
+  },
+  {
+    "name": "foldignore",
+    "shortname": "fdi",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": "#"
+    }
+  },
+  {
+    "name": "foldlevel",
+    "shortname": "fdl",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": 0
+    }
+  },
+  {
+    "name": "foldlevelstart",
+    "shortname": "fdls",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": -1
+    }
+  },
+  {
+    "name": "foldmarker",
+    "shortname": "fmr",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": "{{{,}}}"
+    }
+  },
+  {
+    "name": "foldmethod",
+    "shortname": "fdm",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": "manual"
+    }
+  },
+  {
+    "name": "foldminlines",
+    "shortname": "fml",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": 1
+    }
+  },
+  {
+    "name": "foldnestmax",
+    "shortname": "fdn",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": 20
+    }
+  },
+  {
+    "name": "foldopen",
+    "shortname": "fdo",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": "block,hor,mark,percent,quickfix,search,tag,undo"
+    }
+  },
+  {
+    "name": "foldtext",
+    "shortname": "fdt",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "fold",
+    "default": {
+      "global": "foldtext()"
+    }
+  },
+  {
+    "name": "guicursor",
+    "shortname": "gcr",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "gui",
+    "subCategory": "GUI Setting",
+    "default": {
+      "global": "n-v-c:block-Cursor/lCursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175"
+    }
+  },
+  {
+    "name": "guifont",
+    "shortname": "gfn",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "gui",
+    "subCategory": "GUI Setting",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "guifontset",
+    "shortname": "gfs",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "gui",
+    "subCategory": "GUI Setting",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "guifontwide",
+    "shortname": "gfw",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "gui",
+    "subCategory": "GUI Setting",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "guipty",
+    "shortname": "checkbox",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "gui",
+    "subCategory": "GUI Setting",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "expandtab",
+    "shortname": "et",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "tab",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "hlsearch",
+    "shortname": "hls",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "search",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "ignorecase",
+    "shortname": "ic",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "search",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "incsearch",
+    "shortname": "is",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "search",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "insertmode",
+    "shortname": "im",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "edit mode",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "laststatus",
+    "shortname": "ls",
+    "type": "select",
+    "condition": false,
+    "select": [0, 1 ,2],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "status line",
+    "default": {
+      "global": 0
+    }
+  },
+  {
+    "name": "list",
+    "shortname": "",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "tab",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "mouse",
+    "shortname": "",
+    "type": "select",
+    "condition": false,
+    "select": ["", "n", "v", "i", "c", "h", "a", "r"],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "mouse",
+    "default": {
+      "global": "",
+      "windows": "a",
+      "dos": "a"
+    }
+  },
+  {
+    "name": "mousefocus",
+    "shortname": "mousef",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "mouse",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "mousehide",
+    "shortname": "mh",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "mouse",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "mousemodel",
+    "shortname": "mousem",
+    "type": "select",
+    "condition": false,
+    "select": ["extend", "popup", "popup_setpos"],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "mouse",
+    "default": {
+      "global": "extend",
+      "windows": "popup",
+      "dos": "popup"
+    }
+  },
+  {
+    "name": "mouseshape",
+    "shortname": "mouses",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "mouse",
+    "default": {
+      "global": "i:beam,r:beam,s:updown,sd:cross,m:no,ml:up-arrow,v:rightup-arrow"
+    }
+  },
+  {
+    "name": "mousetime",
+    "shortname": "mouset",
+    "type": "number",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "mouse",
+    "default": {
+      "global": 500
+    }
+  },
+  {
+    "name": "number",
+    "shortname": "nu",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "line number",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "numberwidth",
+    "shortname": "nuw",
+    "type": "number",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "line number",
+    "default": {
+      "global": 4
+    }
+  },
+  {
+    "name": "preserveindent",
+    "shortname": "pi",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "relativenumber",
+    "shortname": "rnu",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "line number",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "shiftwidth",
+    "shortname": "sw",
+    "type": "number",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": 8
+    }
+  },
+  {
+    "name": "shiftround",
+    "shortname": "sr",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "showbreak",
+    "shortname": "sbr",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory":"line break",
+    "default": {
+      "global": ""
+    }
+  },
+  {
+    "name": "showcmd",
+    "shortname": "sc",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory":"status line",
+    "default": {
+      "global": true,
+      "linux": false,
+      "macOS": false,
+      "unix": false
+    }
+  },
+  {
+    "name": "showmode",
+    "shortname": "smd",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory":"status line",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "smartcase",
+    "shortname": "scs",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "search",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "smartindent",
+    "shortname": "si",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "indent",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "smarttab",
+    "shortname": "sta",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "tab",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "softtabstop",
+    "shortname": "sts",
+    "type": "number",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "tab",
+    "default": {
+      "global": 0
+    }
+  },
+  {
+    "name": "spell",
+    "shortname": "",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "spell check",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "splitbelow",
+    "shortname": "sb",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "split",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "splitright",
+    "shortname": "spr",
+    "type": "checkbox",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "split",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "statusline",
+    "shortname": "stl",
+    "type": "text",
+    "condition": true,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory":"status line",
+    "default":{
+      "global": ""
+    }
+  },
+  {
+    "name": "swapfile",
+    "shortname": "swf",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "swap",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "tabstop",
+    "shortname": "ts",
+    "type": "number",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "tab",
+    "default": {
+      "global": 8
+    }
+  },
+  {
+    "name": "updatecount",
+    "shortname": "uc",
+    "type": "number",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": true,
+    "os": "global",
+    "category": "file",
+    "subCategory": "swap",
+    "default": {
+      "global": 200
+    }
+  },
+  {
+    "name": "updatetime",
+    "shortname": "ut",
+    "type": "number",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "file",
+    "subCategory": "swap",
+    "default": {
+      "global": 4000
+    }
+  },
+  {
+    "name": "visualbell",
+    "shortname": "vb",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "visualbell",
+    "default": {
+      "global": false
+    }
+  },
+  {
+    "name": "wrap",
+    "shortname": "",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": true,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory": "line break",
+    "default": {
+      "global": true
+    }
+  },
+  {
+    "name": "wrapmargin",
+    "shortname": "wm",
+    "type": "number",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "display",
+    "subCategory":"line break",
+    "default": {
+      "global": 0
+    }
+  },
+  {
+    "name": "wrapscan",
+    "shortname": "ws",
+    "type": "checkbox",
+    "condition": false,
+    "select": [],
+    "isVimOnly": false,
+    "isGuiOnly": false,
+    "os": "global",
+    "category": "edit",
+    "subCategory": "search",
+    "default": {
+      "global": true
+    }
+  }
+]
