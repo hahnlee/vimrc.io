@@ -8,6 +8,8 @@ export const globalStyles = globalCss({
     width: '100%',
     height: '100%',
     backgroundColor: '#242424',
+    color: '#FFF',
+    fontFamily: 'sans-serif',
   },
 })
 

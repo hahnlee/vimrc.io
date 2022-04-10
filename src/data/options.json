@@ -114,7 +114,7 @@
     "isVimOnly": false,
     "isGuiOnly": false,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": false
@@ -389,7 +389,7 @@
     "isVimOnly": true,
     "isGuiOnly": false,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": false
@@ -404,7 +404,7 @@
     "isVimOnly": true,
     "isGuiOnly": true,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": "0{,0},0),:,0#,!^F,o,O,e"
@@ -419,7 +419,7 @@
     "isVimOnly": true,
     "isGuiOnly": false,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": ""
@@ -434,7 +434,7 @@
     "isVimOnly": true,
     "isGuiOnly": false,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": "if,else,while,do,for,switch"
@@ -449,7 +449,7 @@
     "isVimOnly": true,
     "isGuiOnly": false,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": false
@@ -1057,7 +1057,7 @@
     "isVimOnly": true,
     "isGuiOnly": false,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": false
@@ -1087,7 +1087,7 @@
     "isVimOnly": false,
     "isGuiOnly": false,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": 8
@@ -1102,7 +1102,7 @@
     "isVimOnly": true,
     "isGuiOnly": false,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": false
@@ -1180,7 +1180,7 @@
     "isVimOnly": true,
     "isGuiOnly": false,
     "os": "global",
-    "category": "display",
+    "category": "edit",
     "subCategory": "indent",
     "default": {
       "global": false
